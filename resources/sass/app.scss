@@ -6,3 +6,41 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body {
+
+    background-color: $teal;
+    text-align: center;    
+
+    header {
+        background-color: $blue;
+    
+        h1 {
+            font-size: 100px;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+    }
+
+    .img-container {
+        padding: 20px;
+    }
+
+    .info-container{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+
+    
+        &-inner {
+
+        }
+
+    }
+}
+
+
+
