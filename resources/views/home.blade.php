@@ -20,12 +20,13 @@
             @foreach($allMovies as $movie)
                 <div class="col-12">
                     <div class="row">
-                        @if( $movie->id % 2)
+                        @if( $movie->id % 2 === 1)
                             <div class="col-6">
                                 <div class="img-container">
                                     <img src="{{ $movie->poster_path }}" alt="">
                                 </div>
                             </div>
+                        @endif
                             <div class="col-6">
                                 <div class="info-container">
                                     <div class="info-container-inner">
@@ -38,25 +39,12 @@
                                     </div>
                                 </div>
                             </div>
-                        @else
-                            <div class="col-6">
-                                <div class="info-container">
-                                    <div class="info-container-inner">
-                                        <h2>{{ $movie->name }}</h2>
-                                        <div>Genere: {{ $movie->genre }}</div>
-                                        <div>Anno: {{ $movie->relase_year }}</div>
-                                        <div>
-                                            Descrizione: {{ $movie->description }}
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
+                        @if  ( $movie->id % 2 === 0)                  
                             <div class="col-6">
                                 <div class="img-container">
                                     <img src="{{ $movie->poster_path }}" alt="">
                                 </div>
-                            </div>
-                        
+                            </div>                        
                         @endif
                     </div>
                 </div>
